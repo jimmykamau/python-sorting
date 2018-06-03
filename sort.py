@@ -1,7 +1,8 @@
 import sys
 
 from algorithms import (
-    heap_sort, quick_sort, insertion_sort)
+    heap_sort, quick_sort,
+    insertion_sort, merge_sort)
 
 
 def driver():
@@ -15,6 +16,9 @@ def driver():
         print(quick_sort.quick_sort(unsorted_data))
     if algorithm == "insertion_sort":
         insertion_sort.InsertionSort(unsorted_data)
+    if algorithm == "merge_sort":
+        ms = merge_sort.MergeSort(unsorted_data)
+        print(ms.sort(ms.data))
 
 
 if __name__ == "__main__":
